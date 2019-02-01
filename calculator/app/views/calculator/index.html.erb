@@ -1,0 +1,29 @@
+<h1>Calculator#index</h1>
+
+<%# element to display input / output(if result is not nil) %>
+<%= @display %>
+
+<%# int1, int2, operator, result %>
+<%# numbers 1-9, start by setting int1, append to string of previous number %>
+<%= button_to '1', {:action => "build", :temp => '1', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '2', {:action => "build", :temp => '2', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '3', {:action => "build", :temp => '3', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '4', {:action => "build", :temp => '4', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '5', {:action => "build", :temp => '5', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '6', {:action => "build", :temp => '6', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '7', {:action => "build", :temp => '7', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '8', {:action => "build", :temp => '8', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '9', {:action => "build", :temp => '9', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+<%= button_to '0', {:action => "build", :temp => '0', :int1 => @int1, :int2 => @int2, :operator => @operator}, :method=>:post %>
+
+<%# +, - as soon as hit plus or minus set operator and change num buttons to setting int2 %>
+<%= button_to '+', {:action => "operate", :op => '+', :int1 => @int1, :int2 => @int2, :operator => @operator, :display => @display}, :method=>:post %>
+<%= button_to '-', {:action => "operate", :op => '-', :int1 => @int1, :int2 => @int2, :operator => @operator, :display  => @display}, :method=>:post %>
+
+<%= form_tag({action: "calculate"}, method: "post") do %>
+<%= hidden_field_tag(:int1, @int1)%>
+<%= hidden_field_tag(:int2, @int2)%>
+<%= hidden_field_tag(:operator, @operator)%>
+    <%# equals is post %>
+    <%= submit_tag("=")%>
+<% end %>
