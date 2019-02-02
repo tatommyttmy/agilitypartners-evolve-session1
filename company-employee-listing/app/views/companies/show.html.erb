@@ -12,7 +12,7 @@
 </p>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to 'All Companies', companies_path %>
 
 <%# list employees %>
 <h1>Employees</h1>
@@ -39,6 +39,5 @@
 
 <br>
 
-<%= link_to 'New Employee', new_employee_path %>
-
-
+<%= link_to 'New Employee', new_employee_path(:company_id => @company.id) %>
+<%= link_to 'All Companies', companies_path %>

@@ -4,7 +4,7 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    @employees = params[:company_id] ? Employee.where({id: params[:company_id]}) : Employee.all
   end
 
   # GET /employees/1
@@ -14,7 +14,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees/new
   def new
-    @employee = Employee.new
+    @employee = params[:company_id] ? Employee.new(company_id: params[:company_id]) : Employee.new
   end
 
   # GET /employees/1/edit
