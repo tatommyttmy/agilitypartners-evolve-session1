@@ -7,7 +7,7 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @employee.company_id %>
+  <%= @employee.company.name %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
