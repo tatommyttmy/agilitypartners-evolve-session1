@@ -4,7 +4,8 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = params[:company_id] ? Employee.where({id: params[:company_id]}) : Employee.all
+    @search = params[:search].to_s
+    @employees = @search ? Employee.search_match(@search) : Employee.all
   end
 
   # GET /employees/1
