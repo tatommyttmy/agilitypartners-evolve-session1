@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_device_id: 1
+  to_device_id: 1
+  sent_at: 2019-02-09 00:30:22
+  message: MyString
+
+two:
+  from_device_id: 1
+  to_device_id: 1
+  sent_at: 2019-02-09 00:30:22
+  message: MyString

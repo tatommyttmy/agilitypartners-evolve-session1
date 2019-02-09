@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_device_id: 1
+  to_device_id: 1
+  started_at: 2019-02-09 00:29:38
+  ended_at: 2019-02-09 00:29:38
+
+two:
+  from_device_id: 1
+  to_device_id: 1
+  started_at: 2019-02-09 00:29:38
+  ended_at: 2019-02-09 00:29:38

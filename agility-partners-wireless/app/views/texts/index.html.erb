@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Texts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From device</th>
+      <th>To device</th>
+      <th>Sent at</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @texts.each do |text| %>
+      <tr>
+        <td><%= text.from_device_id %></td>
+        <td><%= text.to_device_id %></td>
+        <td><%= text.sent_at %></td>
+        <td><%= text.message %></td>
+        <td><%= link_to 'Show', text %></td>
+        <td><%= link_to 'Edit', edit_text_path(text) %></td>
+        <td><%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Text', new_text_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From device:</strong>
+  <%= @text.from_device_id %>
+</p>
+
+<p>
+  <strong>To device:</strong>
+  <%= @text.to_device_id %>
+</p>
+
+<p>
+  <strong>Sent at:</strong>
+  <%= @text.sent_at %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @text.message %>
+</p>
+
+<%= link_to 'Edit', edit_text_path(@text) %> |
+<%= link_to 'Back', texts_path %>

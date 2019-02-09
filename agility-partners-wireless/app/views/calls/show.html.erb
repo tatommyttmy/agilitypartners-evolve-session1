@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From device:</strong>
+  <%= @call.from_device_id %>
+</p>
+
+<p>
+  <strong>To device:</strong>
+  <%= @call.to_device_id %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @call.started_at %>
+</p>
+
+<p>
+  <strong>Ended at:</strong>
+  <%= @call.ended_at %>
+</p>
+
+<%= link_to 'Edit', edit_call_path(@call) %> |
+<%= link_to 'Back', calls_path %>
